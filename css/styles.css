@@ -646,7 +646,7 @@ button.order-now-button {
   display: flex;
 }
 
-.footer-form b {
+.footer-form > b {
   display: block;
   margin-bottom: 20px;
 
@@ -656,6 +656,7 @@ button.order-now-button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--text-white-color);
+  
 }
 
 .send-mail .footer-button {
@@ -668,24 +669,26 @@ button.order-now-button {
   padding-right: 28px;
   width: 200px;
 
+  border-radius: 4px;
+  border-width: 0;
+
   font-family: Roboto;
   font-style: 400;
   font-size: 16px;
   line-height: 1.87;
   /* identical to box height 30px */
 
-  
   letter-spacing: 0.06em;
   color: var(--text-white-color);
   fill: var(--text-white-color);
+  background-color: var(--basic-blue-color);
 }
 .footer-button b {
   display: block;
   /* align-items: center;
   justify-content: center; */
   margin-right: 10px;
-text-align: center;
-
+  text-align: center;
 }
 /* ================ПОРТФОЛИО============ */
 
