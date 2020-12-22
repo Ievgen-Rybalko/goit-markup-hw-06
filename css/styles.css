@@ -268,6 +268,63 @@ button.order-now-button {
   border-width: 0;
 }
 
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* opacity: 0.5; */
+}
+
+/* =======Модальное окно===== */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-height: 581px;
+  min-width: 528px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-closed .close-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding: 7px 7px;
+
+  fill: #000000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transition: 150ms;
+}
+
+.modal-closed .close-icon:hover {
+  fill: var(--basic-blue-color);
+  background-color: rgba(255, 1, 1, 0.068);
+  transform: rotate(-90deg);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-label {
+  display: block;
+}
+
 .section.our-advantages-cards {
   padding-bottom: 0;
 }
@@ -549,6 +606,10 @@ button.order-now-button {
   color: var(--text-white-color);
 }
 
+.footer .footer-hero {
+  margin-right: 93px;
+}
+
 .footer .basic-contacts {
   margin-right: 40px;
 }
@@ -581,6 +642,51 @@ button.order-now-button {
   background-color: var(--basic-blue-color);
 }
 
+.footer-form .send-mail {
+  display: flex;
+}
+
+.footer-form b {
+  display: block;
+  margin-bottom: 20px;
+
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-white-color);
+}
+
+.send-mail .footer-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 29px;
+  padding-right: 28px;
+  width: 200px;
+
+  font-family: Roboto;
+  font-style: 400;
+  font-size: 16px;
+  line-height: 1.87;
+  /* identical to box height 30px */
+
+  
+  letter-spacing: 0.06em;
+  color: var(--text-white-color);
+  fill: var(--text-white-color);
+}
+.footer-button b {
+  display: block;
+  /* align-items: center;
+  justify-content: center; */
+  margin-right: 10px;
+text-align: center;
+
+}
 /* ================ПОРТФОЛИО============ */
 
 .portfolio-main {
@@ -732,56 +838,4 @@ button.order-now-button {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
-}
-
-.backdrop {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* opacity: 0.5; */
-}
-
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  min-height: 581px;
-  min-width: 528px;
-  background-color: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-closed .close-icon {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  display: block;
-  width: 30px;
-  height: 30px;
-  padding: 7px 7px;
-
-  fill: #000000;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  transition: 150ms;
-}
-
-.modal-closed .close-icon:hover {
-  fill: var(--basic-blue-color);
-  background-color: rgba(255, 1, 1, 0.068);
-  transform: rotate(-90deg);
-}
-
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
 }
