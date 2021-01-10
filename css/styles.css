@@ -321,11 +321,161 @@ button.order-now-button {
   pointer-events: none;
 }
 
-.form-label {
-  display: block;
+.modal .form {
+  padding-top: 43px;
+  padding-bottom: 37px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
+.modal .form-field {
+  font-family: Roboto;
+}
 
+.form .form-title {
+  margin-bottom: 2px;
+
+  font-weight: 700; /* bold */
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.form-label {
+  display: block;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 60px;
+
+  font-size: 12px;
+  line-height: 1.1667;
+  letter-spacing: 0.01em;
+
+  color: var(--text-common-light-color);
+}
+.form-label .form-input {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transform: translateY(100%);
+  width: 100%;
+  height: 40px;
+  padding-left: 36px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.1667;
+  /* identical to box height */
+  letter-spacing: 0.01em;
+  color: var(--text-common-light-color);
+}
+.form-label .form-icon {
+  /* display: block; */
+  position: absolute;
+  bottom: -24px;
+  left: 12px;
+  transform: translateY(50%);
+  fill: var(--text-headder-dark-color);
+}
+
+.form-input:not(:placeholder-shown) + .form-icon {
+  fill: var(--basic-blue-color);
+}
+
+.form-label .form-input:not(:placeholder-shown) {
+  border-color: var(--basic-blue-color);
+}
+
+.form-label .form-input.comment {
+  padding-left: 12px;
+  padding-top: 12px;
+  height: 120px;
+}
+.form-label .form-input.comment::placeholder {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+.form-label .form-input.comment:not(:placeholder-shown) {
+  border-color: var(--basic-blue-color);
+}
+
+.form .checkbox {
+  margin-top: 144px;
+  padding-left: 52px;
+  padding-right: 51px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  /* identical to box height, or 171% */
+  letter-spacing: 0.03em;
+}
+
+.checkbox-input {
+  /* appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute; */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox .checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  fill: var(--text-white-color);
+  border: 2px solid var(--background-dark-color);
+  border-radius: 2px;
+}
+
+.checkbox-input:checked + .checkbox-icon {
+  /* fill: var(--basic-blue-color); */
+  background-color: var(--basic-blue-color);
+  border-color: var(--basic-blue-color);
+  background-image: url('..images/icons/icon-check.svg'); /* to be fixed do not know how */
+}
+
+.checkbox .conditions-link {
+  text-decoration: underline;
+  color: var(--basic-blue-color);
+}
+
+.form .form-button {
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  margin-left: 165px;
+
+  background-color: var(--basic-blue-color);
+  color: var(--text-white-color);
+  font-weight: 700;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.875;
+  text-align: center;
+  letter-spacing: 0.06em;
+  border-width: 0;
+}
+
+.form .form-button:focus,
+.form .form-button:hover {
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
 
 /* === end of modal form === */
 
@@ -686,7 +836,6 @@ button.order-now-button {
   color: var(--text-white-color);
   font-family: Roboto;
   font-weight: 400;
-
 }
 
 .footer-form > b {
@@ -807,7 +956,6 @@ button.order-now-button {
   height: 294px;
   padding: 63px 24px;
 
- 
   font-family: Roboto;
 
   font-weight: 400;
