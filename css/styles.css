@@ -325,6 +325,10 @@ button.order-now-button {
   display: block;
 }
 
+
+
+/* === end of modal form === */
+
 .section.our-advantages-cards {
   padding-bottom: 0;
 }
@@ -646,6 +650,45 @@ button.order-now-button {
   display: flex;
 }
 
+.send-mail .footer-input {
+  width: 358px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* .send-mail .footer-input::placeholder {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+} */
+
+.send-mail input.footer-input:not(:placeholder-shown) {
+  color: var(--text-white-color);
+  font-family: Roboto;
+  font-weight: 400;
+
+}
+
 .footer-form > b {
   display: block;
   margin-bottom: 20px;
@@ -656,15 +699,15 @@ button.order-now-button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--text-white-color);
-  
 }
 
 .send-mail .footer-button {
   display: flex;
+  margin-left: 12px;
   align-items: center;
   justify-content: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   padding-left: 29px;
   padding-right: 28px;
   width: 200px;
@@ -754,7 +797,7 @@ button.order-now-button {
   /* padding-top: 34px; */
 }
 
-/* Всплівающее окно */
+/* Всплівающее окно карточки*/
 .portfolio-cards .img-item > p {
   display: inline-block;
   position: absolute;
@@ -764,7 +807,7 @@ button.order-now-button {
   height: 294px;
   padding: 63px 24px;
 
-  content: 'Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.';
+ 
   font-family: Roboto;
 
   font-weight: 400;
