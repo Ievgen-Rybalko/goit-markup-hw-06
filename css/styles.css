@@ -380,11 +380,26 @@ button.order-now-button {
   fill: var(--text-headder-dark-color);
 }
 
-.form-input:not(:placeholder-shown) + .form-icon {
+/* input frame remains blue with text typed */
+/* .form-input:not(:placeholder-shown) + .form-icon {
   fill: var(--basic-blue-color);
 }
 
 .form-label .form-input:not(:placeholder-shown) {
+  border-color: var(--basic-blue-color);
+}
+
+.form-label .form-input.comment:not(:placeholder-shown) {
+  border-color: var(--basic-blue-color);
+} */
+
+.form-input:hover + .form-icon,
+.form-input:focus + .form-icon {
+  fill: var(--basic-blue-color);
+}
+
+.form-label:hover .form-input,
+.form-label:focus .form-input {
   border-color: var(--basic-blue-color);
 }
 
@@ -399,9 +414,6 @@ button.order-now-button {
   letter-spacing: 0.01em;
 
   color: rgba(117, 117, 117, 0.5);
-}
-.form-label .form-input.comment:not(:placeholder-shown) {
-  border-color: var(--basic-blue-color);
 }
 
 .form .checkbox {
@@ -440,10 +452,16 @@ button.order-now-button {
 }
 
 .checkbox-input:checked + .checkbox-icon {
-  /* fill: var(--basic-blue-color); */
+  /* display: inline-block;
+  width: 16px;
+  height: 15px; */
+  stroke: var(--text-white-color);
+  fill: var(--basic-blue-color);
   background-color: var(--basic-blue-color);
   border-color: var(--basic-blue-color);
-  background-image: url('..images/icons/icon-check.svg'); /* to be fixed do not know how */
+  background-size: contain;
+  background-origin: border-box;
+  background-image: url(..//images/icons/icon-check.svg); /* to be fixed do not know how */
 }
 
 .checkbox .conditions-link {
